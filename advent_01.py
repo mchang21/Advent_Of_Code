@@ -5,8 +5,6 @@ def parse_data(file):
         lines = f.readlines()
     return lines
 
-# print(parse_data("C:/Users/melvi/Downloads/input.txt"))
-
 file = "C:/Users/melvi/Desktop/Advent2022/Input/input01.txt"
 data = parse_data(file)
 
