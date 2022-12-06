@@ -1,4 +1,4 @@
-PATH = "C:/Users/melvi/Desktop/Advent2022/Input/"
+PATH = '../Advent2022/2022/Day_04/'
 
 # part one
 def find_overlapping_pairs(file):

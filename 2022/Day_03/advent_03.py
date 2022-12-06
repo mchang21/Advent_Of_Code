@@ -1,4 +1,4 @@
-PATH = "C:/Users/melvi/Desktop/Advent2022/Input/"
+PATH = '../Advent2022/2022/Day_03/'
 
 def parse_data(file):
     with open(file) as f:

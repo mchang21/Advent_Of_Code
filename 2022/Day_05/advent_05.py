@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-PATH = "C:/Users/melvi/Desktop/Advent2022/Input/"
+PATH = '../Advent2022/2022/Day_05/'
 
 def parse_crates(file):
     crates = [[] for _ in range(9)]
