@@ -1,4 +1,4 @@
-PATH = '../Advent2022/2022/Day_02/'
+PATH = '../Advent_Of_Code/2022/Day_02/'
 
 def parse_data(file):
     with open(file) as f:

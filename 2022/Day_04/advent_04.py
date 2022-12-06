@@ -1,4 +1,4 @@
-PATH = '../Advent2022/2022/Day_04/'
+PATH = '../Advent_Of_Code/2022/Day_04/'
 
 # part one
 def find_overlapping_pairs(file):

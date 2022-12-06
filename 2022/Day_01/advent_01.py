@@ -5,7 +5,7 @@ def parse_data(file):
         lines = f.readlines()
     return lines
 
-file = "../Advent2022/2022/Day_01/input01.txt"
+file = "../Advent_Of_Code/2022/Day_01/input01.txt"
 data = parse_data(file)
 
 # part one
