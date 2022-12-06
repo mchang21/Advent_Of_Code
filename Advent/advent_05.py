@@ -11,17 +11,10 @@ def parse_crates(file):
             if len(crate) == 1:
                 break
             # parse the corresponding crate to its crate stack
-            crate_idx = 0
-            for i in range(1, len(crate), 4):
+            for i in range(9):
                 # if there is a crate, add it to the deque
-                if crate[i] != ' ' and crate[i].isalpha():
-                    crates[crate_idx].append(crate[i])
-
-                # update the index pointer of the crate stack we are appending to
-                crate_idx += 1
-                if crate_idx % 9 == 0:
-                    crate_idx = 0
-
+                if crate[i*4+1].isalpha():
+                    crates[i].append(crate[i*4+1])
     return [list(reversed(crate)) for crate in crates]
 
 def parse_moves(file):
@@ -43,8 +36,7 @@ def sim_cratemover_9000(crate_stack, moves):
     for move in moves:
         num_crates, crate_from, crate_to = move
         for _ in range(num_crates):
-            popped_crate = crates[crate_from-1].pop()
-            crates[crate_to-1].append(popped_crate)
+            crates[crate_to-1].append(crates[crate_from-1].pop())
 
     # return a list containing the top of crate at each crate stack
     return [crate[-1] for crate in crates]
