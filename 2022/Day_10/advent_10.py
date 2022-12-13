@@ -38,11 +38,7 @@ def draw_crt(file):
             if command[0] == "noop":
                 for _ in range(1):
                     # check if the pixel being drawn overlaps with the sprite
-                    if position == sprite - 1:
-                        pixels[row][position] = '#'
-                    elif position == sprite:
-                        pixels[row][position] = '#'
-                    elif position == sprite + 1:
+                    if position in [sprite - 1, sprite, sprite + 1]:
                         pixels[row][position] = '#'
 
                     # update position
@@ -54,11 +50,7 @@ def draw_crt(file):
             elif command[0] == "addx":
                 for _ in range(2):
                     # check if the pixel being drawn overlaps with the sprite
-                    if position == sprite - 1:
-                        pixels[row][position] = '#'
-                    elif position == sprite:
-                        pixels[row][position] = '#'
-                    elif position == sprite + 1:
+                    if position in [sprite - 1, sprite, sprite + 1]:
                         pixels[row][position] = '#'
                     
                     # update position
