@@ -5,7 +5,7 @@ Monkey 0:
     If true: throw to monkey 4
     If false: throw to monkey 2
 
-Monkey 1:
+Monkey 1: 
   Starting items: 78, 74, 88, 89, 50
   Operation: new = old * 11
   Test: divisible by 5
