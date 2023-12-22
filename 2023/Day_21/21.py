@@ -1,8 +1,7 @@
-import os, numpy as np
+import os
 from collections import deque
 
 file = os.path.join(os.path.dirname(__file__), "input.txt")
-sample = os.path.join(os.path.dirname(__file__), "sample.txt")
 
 def parse_data(file):
     with open(file, 'r') as f:
@@ -38,6 +37,7 @@ graph = parse_data(file)
 (sr, sc), steps = get_start(graph), 64
 print(f"The Elf can reach {bfs(graph, sr, sc, steps)} garden plots in exactly {steps} steps.")
 
+# part two
 def quadratic(points, n):
     a = (points[2] - (2 * points[1]) + points[0]) // 2
     b = points[1] - points[0] - a
@@ -51,5 +51,6 @@ def part2(graph, steps):
     n = (steps - edge) // size
     return quadratic(points, n)
 
+# part two
 steps = 26501365
 print(f"The Elf can reach {part2(graph, steps)} garden plots in exactly {steps} steps.")
